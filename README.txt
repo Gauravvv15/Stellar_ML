@@ -74,16 +74,6 @@ Then converted to light-years:
     ├── requirements.txt
     └── README.md
 
-⚙️ Installation
-    git clone https://github.com/your-username/galaxy-project.git
-    cd galaxy-project
-    pip install -r requirements.txt
-    ▶️ Usage
-    1. Train the model
-    python src/train.py
-    2. Run prediction
-    python main.py
-
 Enter values like:
     alpha, delta, UV, green, red, near_IR, IR, MJD
 
