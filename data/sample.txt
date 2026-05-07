@@ -1,149 +1,62 @@
-# Stellar ML Sample Inputs & Expected Outputs
+GALAXY SAMPLE 1:
+154.2
+38.9
+18.0
+17.2
+16.9
+16.7
+16.6
 
-## GALAXY Samples
+GALAXY SAMPLE 2:
+132.1
+19.3
+17.2
+16.6
+16.3
+16.1
+16.0
 
-### GALAXY Sample 1
+STAR SAMPLE 1:
+110.8
+11.5
+20.8
+19.4
+18.8
+18.5
+18.3
 
-**Input:**
+STAR SAMPLE 2:
+261.382
+64.321
+22.5
+21.2
+20.6
+20.2
+20.0
 
-```python id="a1g7f2"
-alpha = 145.2
-delta = 31.4
-UV_filter = 23.1
-green_filter = 20.2
-red_filter = 19.3
-near_IR_filter = 18.9
-IR_filter = 18.6
-MJD = 52080
-```
+QSO SAMPLE 1:
+183.534
+18.792
+19.2
+18.9
+18.7
+18.6
+18.5
 
-**Expected Output:**
+QSO SAMPLE 2:
+177.38
+-1.12
+19.08
+18.82
+18.75
+18.71
+18.66
 
-* Object Type: GALAXY
-* Confidence: ~55–60%
-* Estimated Redshift: ~0.15
-* Distance: ~650 MPC (~2.12 billion light-years)
-
----
-
-### GALAXY Sample 2
-
-**Input:**
-
-```python id="3c0tyx"
-alpha = 174.2
-delta = 23.4
-UV_filter = 21.0
-green_filter = 19.5
-red_filter = 18.9
-near_IR_filter = 18.5
-IR_filter = 18.3
-MJD = 52050
-```
-
-**Expected Output:**
-
-* Object Type: GALAXY
-* Confidence: ~50–55%
-* Estimated Redshift: ~0.11
-* Distance: ~479 MPC (~1.56 billion light-years)
-
----
-
-### GALAXY Sample 3
-
-**Input:**
-
-```python id="mk4l3b"
-alpha = 154.2
-delta = 38.9
-UV_filter = 18.0
-green_filter = 17.2
-red_filter = 16.9
-near_IR_filter = 16.7
-IR_filter = 16.6
-MJD = 51090
-```
-
-**Expected Output:**
-
-* Object Type: GALAXY
-* Confidence: ~70–75%
-* Estimated Redshift: ~0.05
-* Distance: ~194 MPC (~0.63 billion light-years)
-
----
-
-# QSO Samples
-
-### QSO Sample 1
-
-**Input:**
-
-```python id="yjajv8"
-alpha = 177.38
-delta = -1.12
-UV_filter = 19.08
-green_filter = 18.82
-red_filter = 18.75
-near_IR_filter = 18.71
-IR_filter = 18.66
-MJD = 52045
-```
-
-**Expected Output:**
-
-* Object Type: QSO
-* Confidence: ~79–94%
-* Estimated Redshift: ~0.85
-* Distance: ~3621 MPC (~11.8 billion light-years)
-
----
-
-### QSO Sample 2
-
-**Input:**
-
-```python id="vmr9pz"
-alpha = 210.7
-delta = -5.2
-UV_filter = 19.5
-green_filter = 19.2
-red_filter = 18.9
-near_IR_filter = 18.5
-IR_filter = 18.1
-MJD = 51800
-```
-
-**Expected Output:**
-
-* Object Type: QSO
-* Confidence: ~58–92%
-* Estimated Redshift: ~0.28
-* Distance: ~1185 MPC (~3.87 billion light-years)
-
----
-
-### QSO Sample 3
-
-**Input:**
-
-```python id="o3r2w5"
-alpha = 195.6
-delta = 4.8
-UV_filter = 18.9
-green_filter = 18.7
-red_filter = 18.6
-near_IR_filter = 18.4
-IR_filter = 18.2
-MJD = 51790
-```
-
-**Expected Output:**
-
-* Object Type: QSO
-* Confidence: ~63–64%
-* Estimated Redshift: ~0.40
-* Distance: ~1712 MPC (~5.58 billion light-years)
-
----
+QSO SAMPLE 3:
+195.6
+4.8
+18.9
+18.7
+18.6
+18.4
+18.2

@@ -4,6 +4,13 @@ from src.preprocess import modify_df,align_columns
 from src.predict import class_predict
 import joblib
 
+def safe_float(prompt):
+    while True:
+        try:
+            return float(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter numeric values only.")
+
 while True:
     user=input('Do you want to classify an astronomical object? (yes/no): ')
     if user.lower() in ['no', 'n', 'stop', 'exit', 'quit']:
@@ -11,19 +18,20 @@ while True:
     else:
         try:
             model=joblib.load('models/xgb_redshift_model.pkl')
-            alpha=float(input("Enter the 'alpha' value of the object: "))
-            delta=float(input("Enter the 'delta' value of the object: "))
-            UV_filter=float(input("Enter the 'Ultraviolet' value of the object: "))
-            green_filter=float(input("Enter the 'green_filter' value of the object: "))
-            red_filter=float(input("Enter the 'red_filter' value of the object: "))
-            near_IR_filter=float(input("Enter the 'near_IR_filter' value of the object: "))
-            IR_filter=float(input("Enter the 'IR_filter' value of the object: "))
-            MJD=float(input("Enter the 'MJD' value of the object: "))
+            
+            alpha=safe_float("Enter the 'alpha' value of the object: ")
+            delta=safe_float("Enter the 'delta' value of the object: ")
+            UV_filter=safe_float("Enter the 'Ultraviolet' value of the object: ")
+            green_filter=safe_float("Enter the 'green_filter' value of the object: ")
+            red_filter=safe_float("Enter the 'red_filter' value of the object: ")
+            near_IR_filter=safe_float("Enter the 'near_IR_filter' value of the object: ")
+            IR_filter=safe_float("Enter the 'IR_filter' value of the object: ")
+
             print('Input data received, processing...\n')
 
-            cols=['alpha', 'delta', 'UV_filter', 'green_filter', 'red_filter', 'near_IR_filter', 'IR_filter', 'MJD']
+            cols=['alpha', 'delta', 'UV_filter', 'green_filter', 'red_filter', 'near_IR_filter', 'IR_filter']
 
-            input_data=[alpha, delta, UV_filter, green_filter, red_filter, near_IR_filter, IR_filter, MJD]
+            input_data=[alpha, delta, UV_filter, green_filter, red_filter, near_IR_filter, IR_filter]
 
             input_df=pd.DataFrame([input_data], columns=cols)
             modified_input_df=modify_df(input_df)
@@ -33,6 +41,7 @@ while True:
             prediction=class_predict(modified_input_df)
             print(prediction)
 
-        except:
+        except Exception as e:
+            print(f"error: {e}")
             print("\nAn Error occured while processing your input. Please insure all inputs are valid numbers and try again.\n")
             continue
